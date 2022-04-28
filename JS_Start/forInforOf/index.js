@@ -27,6 +27,10 @@ for (let letters in mystring) {
     console.log(letters); // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 }
 
+for (const letters of mystring) { // of
+    console.log(letters); // H, e, l, l, o,  , W, o, r, l, d
+}      
+
 for (let letters in mystring) {
     console.log(mystring[letters]);
 }
