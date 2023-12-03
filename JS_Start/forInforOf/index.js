@@ -29,7 +29,15 @@ for (let letters in mystring) {
 
 for (const letters of mystring) { // of
     console.log(letters); // H, e, l, l, o,  , W, o, r, l, d
-}      
+}     
+
+let incomes = [62000, 67000, 75000];
+let total = 0;
+
+for (const income of incomes) {
+  total += income;
+}
+console.log(total);
 
 for (let letters in mystring) {
     console.log(mystring[letters]);

@@ -1,3 +1,20 @@
+
+console.log('Start')
+
+
+setTimeout(function cb(){ // Executes Last Even When Time Is 0.
+    console.log('Timeout');
+}, 0);
+
+console.log('End');
+
+/*
+Start
+End
+Timeout
+*/
+
+
 function greet(name, byeText){
     console.log("Hello Good Morning " + name + " " + byeText);
 }

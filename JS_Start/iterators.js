@@ -26,13 +26,13 @@ console.log("My array is ", myArray)
 // Using the iterator
 const fruits = fruitsIterator(myArray);
 
-/*
+
 console.log(fruits.next())
 console.log(fruits.next())
 console.log(fruits.next())
 console.log(fruits.next())
 console.log(fruits.next())
-*/
+
 
 console.log(fruits.next().value) // Apples
 console.log(fruits.next().value) // Grapes

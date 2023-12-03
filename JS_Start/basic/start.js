@@ -51,7 +51,7 @@ console.log(person.hobbies[1]);
 console.log(person.address.city);
 
 const { firstName, lastName, address: { city } } = person; // destructuring
-console.log(firstName, lastName, city);
+console.log(firstName, lastName, city); // Can use them as variables
 
 person.email = 'john@gmail.com';
 console.log(person.email);
@@ -103,7 +103,7 @@ const todoText = todos.map(function (todo) { // map returns a new array
     return todo.text; // return the text of each todo
 });
 
-console.log(todoText);
+console.log(todoText); //  ['Take out trash', 'Meeting with boss', 'Dentist appt']
 
 // For of Loop
 for (const todo of todos) {
@@ -147,6 +147,24 @@ user = {
     }
 }
 user.presentation(); // Error, name is not defined
+
+
+// arrow
+function sum(a, b){
+    return a + b
+}
+
+let add = (a, b) => a + b
+
+function isPositive(num){
+    return num >= 0
+}
+
+let greaterZero = num => num >= 0
+
+// Function with Zero arguments
+let randomNumber = () => Math.random
+
 
 
 
