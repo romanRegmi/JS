@@ -92,3 +92,51 @@ Promise.race([ // will wait for the FIRST ONE to complete instead of waiting for
 ]).then((message) => { 
     console.log(message);
 })
+
+// New Examples
+async function example() {
+  const promise01 = await asyncFunc01(); 
+  const promise02 = await asyncFunc02();
+  
+  console.log(promise01, promise02); // Will take 10 seconds to print
+}
+
+function asyncFunc01() {
+  return new Promise((resolve) => setTimeout(() => resolve("Result 1"), 5000));
+}
+
+function asyncFunc02() {
+  return new Promise((resolve) => setTimeout(() => resolve("Result 2"), 5000));
+}
+
+example();
+
+
+async function example() {
+  const promise01 = asyncFunc01();
+  const promise02 = asyncFunc02();
+  
+  // Do other work here (synchronous or async)
+  console.log("Doing other work...");
+  
+  // Wait for both to complete when needed
+  const [result01, result02] = await Promise.all([promise01, promise02]);
+  console.log(result01, result02); // Will print in 15 sec
+}
+
+function asyncFunc01() {
+  const promise = new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("Result 1");
+    }, 15000);
+    console.log('Inside Promise'); // Will print immediately
+  });
+  console.log('Outside Promise') // Will print immediately
+  return promise;
+}
+
+function asyncFunc02() {
+  return new Promise((resolve) => setTimeout(() => resolve("Result 2"), 10000));
+}
+
+
