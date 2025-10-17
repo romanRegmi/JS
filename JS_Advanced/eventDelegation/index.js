@@ -1,5 +1,3 @@
-// eventDeledation
-
 /*
     Instead of creating a function for each event, we can use event delegation.
     This means that we can create a function that will be called when the event is triggered.

@@ -22,5 +22,6 @@ const doSomeMagic = function(fn, delay){
 
 const betterGetData = doSomeMagic(getData, 1000);
 
-// throttling - calling an API after certain intervals of time
-//            - events occuring in between is ignored
+// throttling 
+// - calling an API after certain intervals of time
+// - events occuring in between is ignored
