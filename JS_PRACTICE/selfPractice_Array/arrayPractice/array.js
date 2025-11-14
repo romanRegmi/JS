@@ -42,18 +42,14 @@ const users = [{
 
 
 /*
- * Exercise 01
- * 
+ * Exercise 01 
  * Check whether every email address in the list of users is valid (get a true or false value)
- */
-
-
+*/
 
 function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
-
 console.log(validateEmail('romanregmi@hotmail.com'));
 
 function fetchEmail(usr) {
@@ -73,45 +69,35 @@ function fetchEmail(usr) {
         return false;
     }
 }
-
 console.log(fetchEmail(users))
 
 // Video Solution
 console.log(users.every(user => /\S+@\S+\.\S+/.test(user.email)));
 
-
 /**
- * Exercise 02
- * 
+ * Exercise 02 
  * Find out how many users have an IP address in a Class A network
  * https://en.wikipedia.org/wiki/Classful_network
- */
-
+*/
 console.log(users.filter(({ ip_address }) => ip_address.split('.')[0] < 128));
 
 /**
  * Exercise 03
- * 
  * Find the position in the array of the first  user object that has a Class B IP address
- */
-
+*/
 console.log(users.findIndex(({ ip_address }) => {
     const firstOctect = ip_address.split('.')[0]
     return firstOctect >= 128 && firstOctect <= 191
 }));
 
 /**
- * Exercise 04
- * 
+ * Exercise 04 
  * Find the user object that has the 'soundcloud' email address
- */
-
+*/
 console.log(users.find(({ email }) => email.includes('soundcloud')));
 
 /**
  * Exercise 05
- * 
  * Replace all the items in the array with a string value of 'deleted'
- */
-
+*/
 console.log(users.fill('deleted'));

@@ -143,36 +143,20 @@ const accounts = [{
 
 
 /**
- * Exercise 03
- * 
+ * Exercise 03 
  * Get a list of all the tags for all the accounts and join them together as a string separated by commas.
- */
-
-
-
-// console.log(accounts.map(({ tags }) => tags.join(', ')).join(','));
-
-
-
+*/
+console.log(accounts.map(({ tags }) => tags.join(', ')).join(','));
 
 /**
- * Exercise 04
- * 
+ * Exercise 04 
  * Get a list of all the friends for all the user's accounts as an array (don't worry about duplicates)
- */
-
-
-// console.log(accounts.map(({ friends }) => friends.map(({ name }) => name)).flat());
-
-
-
-
-
+*/
+console.log(accounts.map(({ friends }) => friends.map(({ name }) => name)).flat());
 
 /**
  * Exercise 05
- * 
  * Get a list of all the friends for all users who are younger than 30 AND have a balance more than $1500
- */
+*/
 console.log(accounts.filter(({ balance, age }) => age <= 30 && parseInt(balance.replace(/\D/g, '')) > 1500))
 console.log(accounts.filter(({ balance, age }) => age <= 30 && parseInt(balance.replace(/\D/g, '')) > 1500).map(({ friends }) => friends.map(({ name }) => name)).flat());

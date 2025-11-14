@@ -4,7 +4,7 @@
  - storage : 5-10MB per domain
  - No expiration
  - Accessible by JS
- - Use Case : Storing user preferences, settings, etc.
+ - Use Case : Storing user preferences, logins, settings, etc.
  - Storage location : Browser
 */
 localStorage.setItem('Name', 'John');
